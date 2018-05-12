@@ -36,7 +36,11 @@ let {
 */
 
 function greeting( obj ) {
-  //Code Here
+  let {
+    firstName,
+    lastName,
+    title
+  } = obj;
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -55,7 +59,16 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation (obj) {
+  let {
+    utah,
+    california,
+    texas,
+    arizona
+  } = obj;
+
+  return utah + california + texas + arizona;
+}
 
 
 
@@ -69,7 +82,16 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients(obj) {
+  var newArr = [];
+  let {
+    carb,
+    fat,
+    protein
+  } = obj;
+  newArr.push(carb, fat, protein);
+  return newArr;
+}
 
 
 
@@ -86,9 +108,16 @@ function greeting( obj ) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
+/*
+function largeNumbers ( {first, second, third} ) {
+  var newArr = [];
+  newArr.push(first, second, third);
+  return Math.min.apply(Math, newArr);
+}
+*/
+// OR 
 
-//Code Here
-
+var largeNumbers = ( {first, second, third} ) =>  Math.min(first, second, third);
 
 
 ////////// PROBLEM 6 //////////
@@ -99,6 +128,15 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
-
-
+function numberGroups ( {a, b, c} ) {
+  var longest = Math.max(a.length, b.length, c.length);
+  if (a.length == longest) {
+    return a;
+  }
+  if (b.length == longest) {
+    return b;
+  }
+  if (c.length == longest) {
+    return c;
+  }
+}

@@ -40,7 +40,12 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  var concat = '';
+  for (key in obj) {
+    console.log(obj[key]);
+    concat += obj[key];
+  }
+  return concat;
 }
 
 
@@ -53,7 +58,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+var greaterThan10 = obj => {
+  for (key in obj) {
+    if (obj[key] > 10) {
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 
 
@@ -65,7 +77,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+var double = obj => {
+  for (key in obj) {
+    obj[key] = obj[key]*2;
+  }
+  return obj;
+}
 
 
 
@@ -79,7 +96,16 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+var secrets = obj => {
+  var str = '';
+  console.log(obj);
+  for (key in obj) {
+    if (obj.startsWith("sh")) {
+      str = str + obj[key];
+    }
+  }
+  return obj;
+}
 
 
 
