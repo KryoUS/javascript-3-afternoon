@@ -133,3 +133,25 @@ let bobsTotal = purchases.reduce((accumulator, currentValue, index, wholeArray) 
     return accumulator;
   }
 }, 0);
+
+/*
+// OR
+
+function getBobTotal(arr) {
+  var total = 0;
+  for (i=0; i< arr.length; i++) {
+    if (arr[i].owner == "Bob") {
+      total += arr[i].price;
+    }
+  }
+  return total;
+}
+
+getBobTotal(purchases);
+
+// OR
+
+purchases.reduce((accum, item) => {
+  return item["owner"] === "Bob" ? accum + item["price"] : accum;
+}, 0)
+*/
