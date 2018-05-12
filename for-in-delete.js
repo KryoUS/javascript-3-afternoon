@@ -98,13 +98,12 @@ var double = obj => {
 
 var secrets = obj => {
   var str = '';
-  console.log(obj);
   for (key in obj) {
-    if (obj.startsWith("sh")) {
-      str = str + obj[key];
+    if (key.startsWith("sh")) {
+      str += obj[key];
     }
   }
-  return obj;
+  return str;
 }
 
 
